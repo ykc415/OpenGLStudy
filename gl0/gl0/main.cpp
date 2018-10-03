@@ -35,6 +35,21 @@ void MyReshape(int NewWidth, int NewHeight) {
     glOrtho(-1.0 * WidthFactor, 1.0 * WidthFactor, -1.0 * HeightFactor, 1.0 * HeightFactor, -1.0, 1.0);
 }
 
+void MyKeyboard(unsigned char KeyPressed, int X, int Y) {
+    switch (KeyPressed) {
+        case 'Q':
+            exit(0);
+            break;
+        case 'q':
+            exit(0);
+            break;
+        case 27:
+            exit(0);
+        default:
+            break;
+    }
+}
+
 int main(int argc, char ** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB);
@@ -47,6 +62,7 @@ int main(int argc, char ** argv) {
     glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
     glutDisplayFunc(MyDisplay);
     glutReshapeFunc(MyReshape);
+    glutKeyboardFunc(MyKeyboard);
     glutMainLoop();
     
     return 0;
