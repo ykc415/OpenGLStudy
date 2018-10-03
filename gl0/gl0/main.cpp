@@ -11,30 +11,23 @@
 #include <OpenGl/glu.h>
 #include <GLUT/glut.h>
 
+GLint TopLeftX, TopLeftY, BottomRightX, BottomRightY;
+
 void MyDisplay() {
     
+    glViewport(0, 0, 300, 300);
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(0.5, 0.5, 0.5);
     glBegin(GL_POLYGON);
 
-    glVertex3d(-0.5, -0.5, 0.0);
-    glVertex3d(0.5, -0.5, 0.0);
-    glVertex3d(0.5, 0.5, 0.0);
-    glVertex3d(-0.5, 0.5, 0.0);
-    
+    glVertex3f(TopLeftX/300.0, (300-TopLeftY)/300.0, 0.0);
+    glVertex3f(TopLeftX/300.0, (300-BottomRightY)/300.0, 0.0);
+    glVertex3f(BottomRightX/300.0, (300-BottomRightY)/300.0, 0.0);
+    glVertex3f(BottomRightX/300.0, (300-TopLeftY)/300.0, 0.0);
+
     glEnd();
     glFlush();
 }
-
-void MyReshape(int NewWidth, int NewHeight) {
-    glViewport(0, 0, NewWidth, NewHeight);
-    GLfloat WidthFactor = (GLfloat)NewWidth / (GLfloat)300;
-    GLfloat HeightFactor = (GLfloat)NewHeight / (GLfloat)300;
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glOrtho(-1.0 * WidthFactor, 1.0 * WidthFactor, -1.0 * HeightFactor, 1.0 * HeightFactor, -1.0, 1.0);
-}
-
 void MyKeyboard(unsigned char KeyPressed, int X, int Y) {
     switch (KeyPressed) {
         case 'Q':
@@ -50,6 +43,23 @@ void MyKeyboard(unsigned char KeyPressed, int X, int Y) {
     }
 }
 
+void MyMouseClick(GLint Button, GLint State, GLint X, GLint Y) {
+    if (Button == GLUT_LEFT_BUTTON && State == GLUT_DOWN) {
+        TopLeftX = X;
+        TopLeftY = Y;
+        
+        std::cout << X << "," << Y << std::endl;
+    }
+}
+
+void MyMouseMove(GLint X, GLint Y) {
+    BottomRightX = X;
+    BottomRightY = Y;
+    std::cout << X << "," << Y << std::endl;
+
+    glutPostRedisplay();
+}
+
 int main(int argc, char ** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB);
@@ -59,10 +69,11 @@ int main(int argc, char ** argv) {
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
+    glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
     glutDisplayFunc(MyDisplay);
-    glutReshapeFunc(MyReshape);
     glutKeyboardFunc(MyKeyboard);
+    glutMouseFunc(MyMouseClick);
+    glutMotionFunc(MyMouseMove);
     glutMainLoop();
     
     return 0;
