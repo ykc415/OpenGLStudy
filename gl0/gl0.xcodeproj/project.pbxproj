@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		519ADC8A2164ADB600D1BE19 /* example.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 519ADC892164ADB600D1BE19 /* example.cpp */; };
+		519ADC8A2164ADB600D1BE19 /* keyboardMouseExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 519ADC892164ADB600D1BE19 /* keyboardMouseExample.cpp */; };
 		519ADC932164ADC800D1BE19 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519ADC912164ADC800D1BE19 /* OpenGL.framework */; };
 		519ADC942164ADC800D1BE19 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519ADC922164ADC800D1BE19 /* GLUT.framework */; };
 		519ADC962164F0B700D1BE19 /* munuExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 519ADC952164F0B700D1BE19 /* munuExample.cpp */; };
+		519ADC982164F8A600D1BE19 /* IdleExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 519ADC972164F8A600D1BE19 /* IdleExample.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +28,11 @@
 
 /* Begin PBXFileReference section */
 		519ADC862164ADB600D1BE19 /* gl0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl0; sourceTree = BUILT_PRODUCTS_DIR; };
-		519ADC892164ADB600D1BE19 /* example.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = example.cpp; sourceTree = "<group>"; };
+		519ADC892164ADB600D1BE19 /* keyboardMouseExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = keyboardMouseExample.cpp; sourceTree = "<group>"; };
 		519ADC912164ADC800D1BE19 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		519ADC922164ADC800D1BE19 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		519ADC952164F0B700D1BE19 /* munuExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = munuExample.cpp; sourceTree = "<group>"; };
+		519ADC972164F8A600D1BE19 /* IdleExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IdleExample.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +51,7 @@
 		519ADC7D2164ADB600D1BE19 = {
 			isa = PBXGroup;
 			children = (
-				519ADC882164ADB600D1BE19 /* gl0 */,
+				519ADC882164ADB600D1BE19 /* glExamples */,
 				519ADC872164ADB600D1BE19 /* Products */,
 				519ADC902164ADC700D1BE19 /* Frameworks */,
 			);
@@ -63,13 +65,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		519ADC882164ADB600D1BE19 /* gl0 */ = {
+		519ADC882164ADB600D1BE19 /* glExamples */ = {
 			isa = PBXGroup;
 			children = (
-				519ADC892164ADB600D1BE19 /* example.cpp */,
+				519ADC892164ADB600D1BE19 /* keyboardMouseExample.cpp */,
 				519ADC952164F0B700D1BE19 /* munuExample.cpp */,
+				519ADC972164F8A600D1BE19 /* IdleExample.cpp */,
 			);
-			path = gl0;
+			path = glExamples;
 			sourceTree = "<group>";
 		};
 		519ADC902164ADC700D1BE19 /* Frameworks */ = {
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				519ADC8A2164ADB600D1BE19 /* example.cpp in Sources */,
+				519ADC8A2164ADB600D1BE19 /* keyboardMouseExample.cpp in Sources */,
+				519ADC982164F8A600D1BE19 /* IdleExample.cpp in Sources */,
 				519ADC962164F0B700D1BE19 /* munuExample.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
