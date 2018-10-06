@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		518B0E0E21688A2B00EA0EE4 /* timerExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 518B0E0D21688A2B00EA0EE4 /* timerExample.cpp */; };
 		518B0E1121688E9C00EA0EE4 /* timerExample2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 518B0E0F21688E9C00EA0EE4 /* timerExample2.cpp */; };
+		518B0E1321689B4E00EA0EE4 /* VertexExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 518B0E1221689B4E00EA0EE4 /* VertexExample.cpp */; };
 		519ADC8A2164ADB600D1BE19 /* keyboardMouseExample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 519ADC892164ADB600D1BE19 /* keyboardMouseExample.cpp */; };
 		519ADC932164ADC800D1BE19 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519ADC912164ADC800D1BE19 /* OpenGL.framework */; };
 		519ADC942164ADC800D1BE19 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519ADC922164ADC800D1BE19 /* GLUT.framework */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		518B0E0D21688A2B00EA0EE4 /* timerExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timerExample.cpp; sourceTree = "<group>"; };
 		518B0E0F21688E9C00EA0EE4 /* timerExample2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timerExample2.cpp; sourceTree = "<group>"; };
+		518B0E1221689B4E00EA0EE4 /* VertexExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexExample.cpp; sourceTree = "<group>"; };
 		519ADC862164ADB600D1BE19 /* gl0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl0; sourceTree = BUILT_PRODUCTS_DIR; };
 		519ADC892164ADB600D1BE19 /* keyboardMouseExample.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = keyboardMouseExample.cpp; sourceTree = "<group>"; };
 		519ADC912164ADC800D1BE19 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,7 @@
 				519ADC972164F8A600D1BE19 /* IdleExample.cpp */,
 				518B0E0D21688A2B00EA0EE4 /* timerExample.cpp */,
 				518B0E0F21688E9C00EA0EE4 /* timerExample2.cpp */,
+				518B0E1221689B4E00EA0EE4 /* VertexExample.cpp */,
 			);
 			path = glExamples;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				519ADC8A2164ADB600D1BE19 /* keyboardMouseExample.cpp in Sources */,
 				519ADC982164F8A600D1BE19 /* IdleExample.cpp in Sources */,
+				518B0E1321689B4E00EA0EE4 /* VertexExample.cpp in Sources */,
 				518B0E1121688E9C00EA0EE4 /* timerExample2.cpp in Sources */,
 				518B0E0E21688A2B00EA0EE4 /* timerExample.cpp in Sources */,
 				519ADC962164F0B700D1BE19 /* munuExample.cpp in Sources */,
