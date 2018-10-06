@@ -18,7 +18,7 @@
 //void MyDisplay() {
 //    glClear(GL_COLOR_BUFFER_BIT);
 //    glColor3f(0.5, 0.0, 0.5);
-//    
+//
 //    if(IsSphere && IsSmall) {
 //        glutWireSphere(0.2, 15, 15);
 //    }
@@ -31,7 +31,7 @@
 //    else {
 //        glutWireTorus(0.2, 0.5, 40, 20);
 //    }
-//    
+//
 //
 //    glFlush();
 //}
@@ -78,7 +78,7 @@
 //    glutAttachMenu(GLUT_RIGHT_BUTTON);
 //    glutDisplayFunc(MyDisplay);
 //    glutMainLoop();
-//    
+//
 //    return 0;
 //}
 //
